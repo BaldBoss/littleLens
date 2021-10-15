@@ -1,3 +1,7 @@
+@charset "UTF-8";
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:ital@0;1&display=swap");
 html,
 body {
   margin: 0;
@@ -5,6 +9,103 @@ body {
   width: 100%;
   background: #efd8e4 !important;
   font-size: 100% !important;
+  position: relative;
+}
+
+html .form-container,
+body .form-container {
+  display: none !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .form-container .form-contact,
+body .form-container .form-contact {
+  width: 320px;
+  background-color: #ac7b92;
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 5%;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+html .form-container .form-contact .form-img,
+body .form-container .form-contact .form-img {
+  text-align: center;
+}
+
+html .form-container .form-contact .form-img img,
+body .form-container .form-contact .form-img img {
+  width: 200px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html .form-container .form-contact .form-img h1,
+body .form-container .form-contact .form-img h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  margin-right: 20px;
+  font-size: 24px;
+  font-family: "Andada Pro", serif;
+  font-weight: bold;
+  color: #efd8e4;
+}
+
+html .form-container .form-contact .btn,
+body .form-container .form-contact .btn {
+  background-color: #bd9cac;
+}
+
+html .showContact,
+body .showContact {
+  display: block !important;
+}
+
+html .contact-btn,
+body .contact-btn {
+  position: absolute;
+  top: 90%;
+  right: 5%;
+  position: fixed;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-color: #ac7b92;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+html .contact-btn:hover,
+body .contact-btn:hover {
+  -webkit-box-shadow: 0 0 0 3px #d8bdcb;
+          box-shadow: 0 0 0 3px #d8bdcb;
 }
 
 html .header,
@@ -26,6 +127,13 @@ body .header {
   z-index: 1;
 }
 
+@media (min-width: 1024px) {
+  html .header,
+  body .header {
+    height: 6rem;
+  }
+}
+
 html .header #nav,
 body .header #nav {
   position: absolute;
@@ -36,6 +144,7 @@ body .header #nav {
   -webkit-transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
   transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
   z-index: 1;
+  font-family: "Andada Pro", serif;
 }
 
 html .header #nav ul,
@@ -51,6 +160,21 @@ body .header #nav ul {
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
+}
+
+@media (min-width: 1024px) {
+  html .header #nav ul,
+  body .header #nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 html .header #nav ul li,
@@ -91,9 +215,26 @@ body .header #nav ul li:hover {
   opacity: 50%;
 }
 
+@media (min-width: 1024px) {
+  html .header #nav ul li,
+  body .header #nav ul li {
+    height: 80px;
+    font-size: 20px;
+    width: 200px;
+    margin-left: 20px;
+  }
+}
+
 html .header .drop,
 body .header .drop {
   top: 3rem !important;
+}
+
+@media (min-width: 1024px) {
+  html .header .drop,
+  body .header .drop {
+    top: 6rem !important;
+  }
 }
 
 html .header .menu-bar,
@@ -159,6 +300,13 @@ body .header .logo {
   background-position: 50% 35%;
 }
 
+@media (min-width: 1024px) {
+  html .header .logo,
+  body .header .logo {
+    width: 300px;
+  }
+}
+
 html .header .btn-search,
 body .header .btn-search {
   background: transparent;
@@ -195,6 +343,13 @@ body .hero-container {
           transform: translate3d(0px, 0px, 0px);
 }
 
+@media (min-width: 1024px) {
+  html .hero-container,
+  body .hero-container {
+    height: 1000px;
+  }
+}
+
 html .hero-container img,
 body .hero-container img {
   position: absolute;
@@ -227,6 +382,7 @@ body .content-container .Title {
   width: 100%;
   height: 100px;
   background-color: #000;
+  font-family: "Andada Pro", serif;
   color: #ac7b92;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -239,6 +395,13 @@ body .content-container .Title {
           align-items: center;
 }
 
+@media (min-width: 1024px) {
+  html .content-container .Title,
+  body .content-container .Title {
+    height: 200px;
+  }
+}
+
 html .content-container .Title h1,
 body .content-container .Title h1 {
   font-size: 30px;
@@ -246,9 +409,27 @@ body .content-container .Title h1 {
   font-weight: 500;
 }
 
+@media (min-width: 1024px) {
+  html .content-container .Title h1,
+  body .content-container .Title h1 {
+    font-size: 50px;
+  }
+}
+
 html .content-container .content-wraper,
 body .content-container .content-wraper {
   margin: 20px;
+  font-family: "Andada Pro", serif;
+}
+
+@media (min-width: 1024px) {
+  html .content-container .content-wraper,
+  body .content-container .content-wraper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 html .content-container .content-wraper .content-card,
@@ -257,6 +438,13 @@ body .content-container .content-wraper .content-card {
   padding: 20px;
   border-radius: 20px;
   margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+  html .content-container .content-wraper .content-card,
+  body .content-container .content-wraper .content-card {
+    margin: 20px;
+  }
 }
 
 html .content-container .content-wraper .content-card .card-img,
@@ -268,6 +456,13 @@ body .content-container .content-wraper .content-card .card-img {
   background: url("../img/portait demo.jpg");
   background-size: cover;
   background-position: center;
+}
+
+@media (min-width: 1024px) {
+  html .content-container .content-wraper .content-card .card-img,
+  body .content-container .content-wraper .content-card .card-img {
+    height: 500px;
+  }
 }
 
 html .content-container .content-wraper .content-card:nth-child(2) .card-img,
@@ -287,6 +482,59 @@ body .content-container .content-wraper .content-card:nth-child(3) .card-img {
 html .content-container .content-wraper .content-card .card-info,
 body .content-container .content-wraper .content-card .card-info {
   text-align: center;
+}
+
+html .content-container .content-wraper .content-card .card-info .card-detail,
+body .content-container .content-wraper .content-card .card-info .card-detail {
+  text-align: left;
+  padding: 10px;
+  padding-top: 20px;
+  background-color: #ac7b92;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 12px;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+html .content-container .content-wraper .content-card .card-info .card-detail p span,
+body .content-container .content-wraper .content-card .card-info .card-detail p span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+html .content-container .content-wraper .content-card .card-info .card-detail ul li,
+body .content-container .content-wraper .content-card .card-info .card-detail ul li {
+  list-style: none;
+}
+
+html .content-container .content-wraper .content-card .card-info .card-detail ul li::before,
+body .content-container .content-wraper .content-card .card-info .card-detail ul li::before {
+  content: "·";
+  font-size: 50px;
+  vertical-align: middle;
+  line-height: 20px;
+  color: #000;
+}
+
+html .content-container .content-wraper .content-card .card-info .card-detail ul li ul li,
+body .content-container .content-wraper .content-card .card-info .card-detail ul li ul li {
+  padding: 10px;
+}
+
+html .content-container .content-wraper .content-card .card-info .card-detail ul li ul li::before,
+body .content-container .content-wraper .content-card .card-info .card-detail ul li ul li::before {
+  content: "";
+}
+
+html .content-container .content-wraper .content-card .card-info .dropDetail,
+body .content-container .content-wraper .content-card .card-info .dropDetail {
+  opacity: 1;
+  height: auto;
 }
 
 html .content-container .content-wraper .content-card .card-info h2,
@@ -323,6 +571,7 @@ body .slider-container .Title-slider {
   width: 100%;
   height: 100px;
   background-color: #000;
+  font-family: "Andada Pro", serif;
   color: #ac7b92;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,9 +591,44 @@ body .slider-container .Title-slider h1 {
   font-weight: 500;
 }
 
+@media (min-width: 1024px) {
+  html .slider-container .Title-slider h1,
+  body .slider-container .Title-slider h1 {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html .slider-container .Title-slider,
+  body .slider-container .Title-slider {
+    height: 200px;
+  }
+}
+
 html .slider-container .slider-wraper,
 body .slider-container .slider-wraper {
   padding: 20px;
+}
+
+@media (min-width: 1024px) {
+  html .slider-container .slider-wraper,
+  body .slider-container .slider-wraper {
+    padding: 100px;
+  }
+}
+
+html .slider-container .carousel-inner,
+body .slider-container .carousel-inner {
+  background-color: #000;
+}
+
+@media (min-width: 1024px) {
+  html .slider-container .carousel-inner .item img,
+  body .slider-container .carousel-inner .item img {
+    height: 900px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 html .slider-container a,
