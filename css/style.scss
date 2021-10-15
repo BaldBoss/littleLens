@@ -1,0 +1,258 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+$primaryPink: #bd9cac;
+$mpink: #d8bdcb;
+$darkpink: #ac7b92;
+$lightpink: #efd8e4;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: $lightpink !important;
+  font-size: 100% !important;
+  .header {
+    width: 100%;
+    height: 3rem;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    position: fixed;
+    z-index: 1;
+    #nav {
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      top: -250px;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+      z-index: 1;
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        li {
+          background: $primaryPink;
+          height: 70px;
+          width: 80px;
+          padding: 10px;
+          margin-top: 10px;
+          border-radius: 10px;
+          color: #fff;
+          @include flexCenter();
+          font-size: 12px;
+          transition: 0.2s;
+          &:first-child {
+            margin-left: 10px;
+          }
+          &:last-child {
+            margin-right: 10px;
+          }
+          &:hover {
+            opacity: 50%;
+          }
+        }
+      }
+    }
+    .drop {
+      top: 3rem !important;
+    }
+    .menu-bar {
+      width: 10%;
+      height: 100%;
+      cursor: pointer;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 30px;
+        height: 3px;
+        background-color: $primaryPink;
+        margin: 6px 0;
+        transition: 0.4s;
+        margin: 3px 0px;
+      }
+    }
+    .change {
+      .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 5px);
+      }
+      .bar2 {
+        opacity: 0;
+      }
+      .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-7px, -5px);
+      }
+    }
+    .logo {
+      width: 150px;
+      height: 100%;
+      background: url("../img/logo\ LL-01.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 35%;
+    }
+    .btn-search {
+      background: transparent;
+      outline: none;
+      border: none;
+      color: $primaryPink;
+      margin-right: 10px;
+      .fa-search {
+        font-size: 20px;
+      }
+    }
+  }
+  .hero-container {
+    width: 100%;
+    height: 600px;
+    background: url("../img/background\ photo.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    @include flexCenter();
+    position: relative;
+    transform: translate3d(0px, 0px, 0px);
+    img {
+      position: absolute;
+      top: 35%;
+    }
+    .btn-drop {
+      position: absolute;
+      bottom: 0;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      .fa-chevron-down {
+        font-size: 4rem;
+        color: #fff;
+        opacity: 50%;
+      }
+      &:hover {
+        .fa-chevron-down {
+          color: #000;
+        }
+      }
+    }
+  }
+  .content-container {
+    .Title {
+      width: 100%;
+      height: 100px;
+      background-color: #000;
+      color: $darkpink;
+      @include flexCenter();
+      h1 {
+        font-size: 30px;
+        margin: 0;
+        font-weight: 500;
+      }
+    }
+    .content-wraper {
+      margin: 20px;
+      .content-card {
+        background-color: $mpink;
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+        .card-img {
+          width: 100%;
+          height: 200px;
+          margin: 0 auto;
+          background-color: $mpink;
+          background: url("../img/portait\ demo.jpg");
+          background-size: cover;
+          background-position: center;
+        }
+        &:nth-child(2) .card-img {
+          background: url("../img/lookbook\ demo.jpg");
+          background-size: cover;
+          background-position: center;
+        }
+        &:nth-child(3) .card-img {
+          background: url("../img/make\ up\ demo.jpg");
+          background-size: cover;
+          background-position: center;
+        }
+        .card-info {
+          text-align: center;
+          h2 {
+            font-size: 20px;
+          }
+          .btn-detail {
+            height: 40px;
+            width: 80px;
+            border-radius: 10px;
+            background-color: $darkpink;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            transition: 0.5s;
+            &:hover {
+              background-color: #70485c;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slider-container {
+    text-align: center;
+    margin-bottom: 20px;
+    .Title-slider {
+      width: 100%;
+      height: 100px;
+      background-color: #000;
+      color: $darkpink;
+      @include flexCenter();
+      h1 {
+        font-size: 30px;
+        margin: 0;
+        font-weight: 500;
+      }
+    }
+    .slider-wraper {
+      padding: 20px;
+    }
+    a {
+      color: $darkpink;
+      text-decoration: underline;
+    }
+  }
+  .footer {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #000;
+    color: $lightpink;
+    @include flexCenter();
+    flex-direction: column;
+    .footer-icon {
+      @include flexCenter();
+      margin-top: 10px;
+      .icon {
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 12px;
+        border-right: solid 1px $lightpink;
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+}
