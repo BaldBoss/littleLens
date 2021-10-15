@@ -504,8 +504,8 @@ body .content-container .content-wraper .content-card .card-info .card-detail {
   border-radius: 10px;
   color: #fff;
   font-size: 12px;
-  -webkit-transition: opacity 1s ease-out;
-  transition: opacity 1s ease-out;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
   opacity: 0;
   height: 0;
   overflow: hidden;
@@ -690,6 +690,12 @@ body .footer .footer-icon .icon {
   padding-left: 10px;
   font-size: 12px;
   border-right: solid 1px #efd8e4;
+}
+
+html .footer .footer-icon .icon a,
+body .footer .footer-icon .icon a {
+  color: #efd8e4;
+  text-decoration: none;
 }
 
 html .footer .footer-icon .icon:last-child,

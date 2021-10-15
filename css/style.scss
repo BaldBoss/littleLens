@@ -309,7 +309,7 @@ body {
             border-radius: 10px;
             color: #fff;
             font-size: 12px;
-            transition: opacity 1s ease-out;
+            transition: opacity 0.2s ease-out;
             opacity: 0;
             height: 0;
             overflow: hidden;
@@ -425,6 +425,10 @@ body {
         padding-left: 10px;
         font-size: 12px;
         border-right: solid 1px $lightpink;
+        a {
+          color: $lightpink;
+          text-decoration: none;
+        }
         &:last-child {
           border: none;
         }
